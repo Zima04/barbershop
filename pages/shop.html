@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Shop</title>
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    <body>
+        <header class="main-header">
+            <div class="container">
+                <nav class="main-navigation">
+                    <ul>
+                        <li>
+                            <a href="../index.html">Главная</a>
+                        </li>
+                        <li>
+                            <a href="#">Информация</a>
+                        </li>
+                        <li>
+                            <a href="#">Новости</a>
+                        </li>
+                        <li>
+                            <a href="price.html">Прайс-лист</a>
+                        </li>
+                        <li>
+                            <a href="#">Магазин</a>
+                        </li>
+                        <li>
+                            <a href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="user-block">
+                    <a class="login" href="#">Вход</a>
+                </div>
+            </div>
+        </header>
+        <main class="container">
+            <h1 class="shop-title">Средства для ухода</h1>
+            <nav class="shop-navigation">
+                <ul>
+                    <li>
+                        <a href="../index.html">Главная</a>
+                    </li>
+                    <li>
+                        <a href="shop.html">Магазин</a>
+                    </li>
+                    <li>
+                        <a href="#">Средства для ухода</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="shop-content">
+                <div class="shop-content-left">
+                    <form class="shop-filter">
+                        <div class="producers">
+                            <h2>Произвоители:</h2>
+                            <label for="producer-1">Baxter of California</label>
+                            <input type="checkbox"
+                                   id="producer-1"
+                                   name="Baxter of California">
+                            <label for="producer-2">Mr Natty</label>
+                            <input type="checkbox"
+                                   id="producer-2"
+                                   name="Mr Natty">
+                            <label for="producer-3">Suavecito</label>
+                            <input type="checkbox"
+                                   id="producer-3"
+                                   name="Suavecito">
+                            <label for="producer-4">Malin+Goetz</label>
+                            <input type="checkbox"
+                                   id="producer-4"
+                                   name="Malin+Goetz">
+                            <label for="producer-5">Murray's</label>
+                            <input type="checkbox"
+                                   id="producer-5"
+                                   name="Murray's">
+                            <label for="producer-6">American crew</label>
+                            <input type="checkbox"
+                                   id="producer-6"
+                                   name="American crew">
+                        </div>
+                        <div class="product groups">
+                            <h2>Группы товаров:</h2>
+                            <label for="product-1">Бритвенные принадлежности</label>
+                            <input type="radio" id="product-1" name="product">
+                            <label for="product-2">Средства для ухода</label>
+                            <input type="radio" id="product-2" name="product">
+                            <label for="product-3">Аксессуары</label>
+                            <input type="radio" id="product-3" name="product">
+                        </div>
+                        <button class="btn" type="submit">Показать</button>
+                    </form>
+                </div>
+                <div class="shop-content-right">
+                    <ul class="products-list">
+                        <li class="product-wrapper">
+                            <a class="product" href="#">
+                                <img src="" alt="Фото">
+                                <h4>Набор для путешествий "Baxter of California"</h4>
+                            </a>
+                            <p class="product-price">2900 руб.</p>
+                            <button class="btn product-buy">Купить</button>
+                        </li>
+                        <li class="product-wrapper">
+                            <a class="product" href="#">
+                                <img src="" alt="Фото">
+                                <h4>Увлажняющий кондиционер "Baxter of
+                                    California"</h4>
+                            </a>
+                            <p class="product-price">750 руб.</p>
+                            <button class="btn product-buy">Купить</button>
+                        </li>
+                        <li class="product-wrapper">
+                            <a class="product" href="#">
+                                <img src="" alt="Фото">
+                                <h4>Гель для волос "Suavecito"</h4>
+                            </a>
+                            <p class="product-price">290 руб.</p>
+                            <button class="btn product-buy">Купить</button>
+                        </li>
+                        <li class="product-wrapper">
+                            <a class="product" href="#">
+                                <img src="" alt="Фото">
+                                <h4>Глина для укладки волос "American crew"</h4>
+                            </a>
+                            <p class="product-price">500 руб.</p>
+                            <button class="btn product-buy">Купить</button>
+                        </li>
+                        <li class="product-wrapper">
+                            <a class="product" href="#">
+                                <img src="" alt="Фото">
+                                <h4>Гель для укладки волос "American crew"</h4>
+                            </a>
+                            <p class="product-price">300 руб.</p>
+                            <button class="btn product-buy">Купить</button>
+                        </li>
+                        <li class="product-wrapper">
+                            <a class="product" href="#">
+                                <img src="" alt="Фото">
+                                <h4>Набор для бритья "Baxter of california"</h4>
+                            </a>
+                            <p class="product-price">3900 руб.</p>
+                            <button class="btn product-buy">Купить</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="shop-pagination">
+                <ul>
+                    <li>
+                        <a class="pagination-btn" href="#">1</a>
+                    </li>
+                    <li>
+                        <a class="pagination-btn" href="#">2</a>
+                    </li>
+                    <li>
+                        <a class="pagination-btn" href="#">3</a>
+                    </li>
+                    <li>
+                        <a class="pagination-btn" href="#">4</a>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="footer-contacts">
+                    Барбершоп "Бородинский"<br>
+                    Адрес: г. Минск, ул. Победителей, 102/8<br>
+                    <a href="#">Как нас найти?</a><br>
+                    Телефон: +375(29)1029210
+                </div>
+                <div class="footer-social">
+                    <p>Давайте дружить!</p>
+                    <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+                    <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+                    <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>Разработано:</p>
+                    <a href="#">Разработчик</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
