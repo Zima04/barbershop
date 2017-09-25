@@ -7,11 +7,16 @@
     </head>
     <body>
         <header class="main-header">
-            <div class="container">
+            <div class="center clear-fix">
                 <nav class="main-navigation">
                     <ul>
                         <li>
-                            <a href="../index.html">Главная</a>
+                            <a href="../index.html">
+                                <img src="../assets/small-logo.png"
+                                     width="111"
+                                     height="24"
+                                     alt="Главная">
+                            </a>
                         </li>
                         <li>
                             <a href="#">Информация</a>
@@ -20,10 +25,10 @@
                             <a href="#">Новости</a>
                         </li>
                         <li>
-                            <a href="#">Прайс-лист</a>
+                            <a href="price.html">Прайс-лист</a>
                         </li>
                         <li>
-                            <a href="#">Магазин</a>
+                            <a href="shop.html">Магазин</a>
                         </li>
                         <li>
                             <a href="#">Контакты</a>
@@ -35,37 +40,50 @@
                 </div>
             </div>
         </header>
-        <main class="container">
+        <main class="center item-container">
             <h1 class="item-title">Набор для путешесвий "Baxter of California"</h1>
-            <nav class="item-navigation">
-                <ul>
-                    <li>
-                        <a href="../index.html">Главная</a>
-                    </li>
-                    <li>
-                        <a href="#">Магазин</a>
-                    </li>
-                    <li>
-                        <a href="#">Средства для ухода</a>
-                    </li>
-                    <li>
-                        <a class="current-item" href="#">Набор для путешесвий "Baxter
-                                                         of California"</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="item-content">
+            <ul class="bread-crowns">
+                <li>
+                    <a href="../index.html">Главная</a>
+                </li>
+                <li>
+                    <a href="shop.html">Магазин</a>
+                </li>
+                <li>
+                    <a href="#">Средства для ухода</a>
+                </li>
+                <li>
+                    <a class="current-item" href="#">Набор для путешесвий "Baxter
+                                                     of California"</a>
+                </li>
+            </ul>
+            <div class="item-content clear-fix">
                 <div class="item-content-left">
                     <figure class="item-photos">
-                        <img class="main-item-photo" src="" alt="фото 1">
-                        <img src="" alt="фото 2">
-                        <img src="" alt="фото 3">
-                        <img src="" alt="фото 4">
+                        <img class="main-item-photo"
+                             src="../assets/item-photo-1.jpg"
+                             width="460"
+                             height="498"
+                             alt="фото 1">
+                        <img src="../assets/item-photo-2.jpg"
+                             width="140"
+                             height="149"
+                             alt="фото 2">
+                        <img src="../assets/item-photo-3.jpg"
+                             width="140"
+                             height="149"
+                             alt="фото 3">
+                        <img src="../assets/item-photo-4jpg.jpg"
+                             width="140"
+                             height="149"
+                             alt="фото 4">
                     </figure>
                 </div>
                 <div class="item-content-right">
-                    <p class="item-status">Есть в наличии</p>
-                    <p class="item-number">Артикул:Dexter-ae</p>
+                    <div class="item-info clear-fix">
+                        <p class="item-status">Есть в наличии</p>
+                        <p class="item-number">Артикул:Dexter-ae</p>
+                    </div>
                     <p class="item-description">Travel kit - необходимый аксессуар во
                                                 время любого путешествия. В
                                                 аккуратной кожаной сумке находится
@@ -91,8 +109,8 @@
                 </div>
             </div>
         </main>
-        <footer class="main-footer">
-            <div class="container">
+        <footer>
+            <div class="center footer-container clear-fix">
                 <div class="footer-contacts">
                     Барбершоп "Бородинский"<br>
                     Адрес: г. Минск, ул. Победителей, 102/8<br>

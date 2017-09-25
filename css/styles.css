@@ -18,6 +18,12 @@ body {
     content: "";
 }
 
+.bread-crowns {
+    margin-bottom: 56px;
+
+    background-color: rgba(90, 250, 38, 0.84);
+}
+
 /*header*/
 .main-navigation {
     float: left;
@@ -124,24 +130,28 @@ body {
     background-color: rgba(250, 0, 0, 0.3);
 }
 
+.gallery-content {
+    margin: 0;
+}
+
+.gallery-content img {
+    border: 7px solid #fff;
+}
+
 /*index-content*/
 /*home*/
 
 /*shop*/
 .shop-container {
-    margin-top: 55px;
-    padding-bottom: 1px;
+    padding-bottom: 45px;
+    padding-top: 55px;
 }
 
 .shop-title {
     margin-bottom: 20px;
+    margin-top: 0;
 
     background-color: rgba(90, 250, 38, 0.84);
-}
-
-.bread-crowns {
-    background-color: rgba(90, 250, 38, 0.84);
-    margin-bottom: 56px;
 }
 
 .shop-content {
@@ -167,15 +177,20 @@ body {
     float: right;
     width: 700px;
 
+    font-size: 0;
+
     background-color: rgba(250, 0, 0, 0.3);
 }
 
 .product-wrapper {
-    float: left;
+    display: inline-block;
+    vertical-align: top;
     margin-right: 20px;
     margin-bottom: 20px;
-    width: 220px;
     min-height: 273px;
+    width: 220px;
+
+    font-size: 16px;
 
     background-color: rgba(249, 58, 250, 0.3);
 }
@@ -186,12 +201,143 @@ body {
 
 .shop-pagination {
     margin-left: 240px;
-    margin-bottom: 45px;
+    margin-bottom: 0;
 
     background-color: rgba(90, 250, 38, 0.84);
 }
 
 /*shop*/
 /*price*/
+.price-container {
+    padding-top: 55px;
+    padding-bottom: 80px;
+}
+
+.price-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    background-color: rgba(90, 250, 38, 0.84);
+}
+
+.price-tag-line {
+    margin-top: 0;
+    margin-bottom: 64px;
+
+    background-color: rgba(90, 250, 38, 0.84);
+}
+
+.price-content {
+    margin-bottom: 65px;
+}
+
+.price-content-left {
+    float: left;
+    width: 240px;
+
+    background-color: rgba(90, 250, 38, 0.84);
+}
+
+.price-content-right {
+    float: right;
+    width: 460px;
+
+    background-color: rgba(90, 250, 38, 0.84);
+}
+
+.service-prices table {
+    width: 460px;
+
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+.service-prices table td {
+    width: 50%;
+
+    border: 2px solid black;
+}
+
+.service-prices table td:last-child {
+    text-align: center;
+}
+
+.service-prices table tr {
+    height: 38px;
+
+    border: 2px solid black;
+}
+
+.about-us h2 {
+    margin-bottom: 35px;
+}
+
+.description p {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 80px;
+    float: left;
+    width: 400px;
+}
+
+.description p:last-child {
+    margin-right: 0;
+}
 
 /*price*/
+/*item*/
+.item-container {
+    padding-top: 55px;
+    padding-bottom: 50px;
+}
+
+.item-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    background-color: rgba(90, 250, 38, 0.84);
+}
+
+.item-content-left {
+    float: left;
+    width: 460px;
+
+    background-color: rgba(90, 250, 38, 0.84);
+}
+
+.item-content-left figure {
+    margin: 0;
+
+    font-size: 0;
+}
+
+.item-content-left figure img {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.item-content-left figure img:last-child {
+    margin-right: 0;
+}
+
+.item-content-left figure img:first-child {
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+
+.item-content-right {
+    float: right;
+    width: 390px;
+
+    background-color: rgba(90, 250, 38, 0.84);
+}
+
+.item-status {
+    float: left;
+}
+
+.item-number {
+    float: right;
+}
+
+/*item*/
