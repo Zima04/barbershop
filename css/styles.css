@@ -920,7 +920,7 @@ fieldset legend {
 
 /*product*/
 
-/*modal-content*/
+/*modal-content-form*/
 .modal-overlay {
     position: fixed;
     z-index: 20;
@@ -934,7 +934,7 @@ fieldset legend {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.modal-content {
+.modal-content-form {
     position: fixed;
     z-index: 30;
     top: 120px;
@@ -988,7 +988,7 @@ fieldset legend {
     transform: rotate(-45deg);
 }
 
-.modal-content h2 {
+.modal-content-form h2 {
     margin: 0;
     margin-bottom: 20px;
 
@@ -996,7 +996,7 @@ fieldset legend {
     line-height: 42px;
 }
 
-.modal-content p {
+.modal-content-form p {
     margin: 0;
     margin-bottom: 14px;
 }
@@ -1046,4 +1046,24 @@ fieldset legend {
     color: #000000;
 }
 
-/*modal-content*/
+/*modal-content-form*/
+
+.modal-content-map {
+    position: fixed;
+    z-index: 30;
+    top: calc(50% - 287px);
+    left: calc(50% - 390px);
+    display: none;
+
+    width: 780px;
+    height: 574px;
+
+    box-sizing: border-box;
+    border: 7px solid #ffffff;
+    background: url("../assets/map.jpg") no-repeat center top;
+}
+
+.modal-content-map .modal-content-close {
+    top: -4px;
+    right: -37px;
+}
