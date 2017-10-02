@@ -42,7 +42,7 @@ body {
 .bread-crowns li {
     position: relative;
     display: inline-block;
-    padding-right: 22px;
+    padding-right: 20px;
     margin-right: 15px;
 
     font-size: 14px;
@@ -76,6 +76,10 @@ body {
 .bread-crowns a {
     color: inherit;
     text-decoration: none;
+}
+
+.bread-crowns a:hover {
+    text-decoration: underline;
 }
 
 .btn {
@@ -146,7 +150,86 @@ body {
     content: "";
 }
 
+/*custom checkbox and radio button*/
+.checkbox, .radio {
+    vertical-align: top;
+    margin: 0 3px 0 0;
+    width: 18px;
+    height: 18px;
+}
+
+.checkbox + label, .radio + label {
+    cursor: pointer;
+}
+
+.checkbox:not(checked), .radio:not(checked) {
+    display: none;
+}
+
+.checkbox:not(checked) + label, .radio:not(checked) + label {
+    position: relative;
+    padding: 0;
+    padding-left: 30px;
+}
+
+.checkbox:not(checked) + label::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 0;
+
+    width: 18px;
+    height: 18px;
+
+    border: 2px solid #000000;
+}
+
+.radio:not(checked) + label::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 0;
+
+    width: 18px;
+    height: 18px;
+
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.checkbox:not(checked) + label::after,
+.radio:not(checked) + label::after {
+    content: "";
+}
+
+.checkbox:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 4px;
+
+    width: 14px;
+    height: 14px;
+
+    background: url("../assets/cross.svg") no-repeat;
+}
+
+.radio:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 6px;
+
+    width: 10px;
+    height: 10px;
+
+    background-color: #000000;
+    border-radius: 5px;
+}
+
+/*custom checkbox*/
 /*header*/
+
 .main-header {
     color: #ffffff;
     background-color: #000000;
@@ -158,6 +241,8 @@ body {
 }
 
 .main-navigation ul {
+    display: inline-block;
+    vertical-align: top;
     margin: 0;
     padding: 0;
 
@@ -181,14 +266,44 @@ body {
     text-decoration: none;
 }
 
+.main-navigation span {
+    display: block;
+    padding: 25px 20px;
+}
+
 .main-navigation a.nav-logo {
+    display: inline-block;
+    vertical-align: top;
     padding: 0 20px;
-    padding-top: 24px;
-    padding-bottom: 18px;
+    padding-top: 23px;
+    padding-bottom: 16px;
 }
 
 .main-navigation a:hover {
     background-color: #242424;
+}
+
+.main-navigation a.nav-logo:hover {
+    background: none;
+}
+
+.main-navigation li.active {
+    position: relative;
+}
+
+.main-navigation li.active::after {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    height: 5px;
+
+    background-color: #ffffff;
+    content: "";
+}
+
+.main-navigation li.active a:hover {
+    background: none;
 }
 
 .user-block {
@@ -206,6 +321,7 @@ body {
     line-height: 20px;
     color: #ffffff;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .login:hover {
@@ -304,7 +420,7 @@ body {
 }
 
 .social-btn-inst:hover {
-    background: #ffffff url("../assets/sprites.png") no-repeat -37px -90px;
+    background: #ffffff url("../assets/sprites.png") no-repeat -38px -90px;
 }
 
 /*footer*/
@@ -515,14 +631,34 @@ body {
 .shop-content-left {
     float: left;
     width: 170px;
-
-    background-color: rgba(250, 0, 0, 0.3);
 }
 
-.producers, .product-groups {
-    margin-bottom: 50px;
+.shop-filter fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
 
-    background-color: rgba(249, 58, 250, 0.3);
+fieldset.producers, fieldset.product-groups {
+    margin-bottom: 50px;
+}
+
+fieldset legend {
+    margin-bottom: 30px;
+
+    font-size: 24px;
+}
+
+.shop-checkbox:not(checked) + label {
+    position: relative;
+
+    padding: 0 0 0 40px;
+}
+
+.producers label, .product-groups label {
+    display: block;
+
+    margin-bottom: 15px;
 }
 
 .shop-content-right {
@@ -625,37 +761,33 @@ body {
 }
 
 .price-tag-line {
+    position: relative;
     margin-top: 0;
     margin-bottom: 64px;
 
     text-align: center;
 }
 
-.price-tag-line strong {
+.price-tag-line h2 {
     position: relative;
-    display: block;
-    padding: 0 160px;
-    width: 620px;
+    display: inline-block;
+    margin: 0;
+    padding: 0 25px;
     font-size: 48px;
     line-height: 60px;
+
+    background: #fefbf8 url("../assets/content-texture.png");
 }
 
-.price-tag-line strong:before, .price-tag-line strong:after {
+.price-tag-line::before {
     position: absolute;
     top: 30px;
+    left: 0;
+    right: 0;
     height: 2px;
-    width: 160px;
 
     background-color: #000000;
     content: "";
-}
-
-.price-tag-line strong:before {
-    left: 0;
-}
-
-.price-tag-line strong:after {
-    right: 0;
 }
 
 .price-content {
@@ -790,3 +922,193 @@ body {
 }
 
 /*product*/
+
+/*modal-content-form*/
+.modal-overlay {
+    position: fixed;
+    z-index: 20;
+    display: none;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content-form {
+    position: fixed;
+    z-index: 30;
+    top: 120px;
+    display: none;
+    left: calc(50% - 240px);
+
+    width: 300px;
+    padding: 50px 80px;
+
+    color: #000000;
+
+    background: #fefbf8 url("../assets/content-texture.png");
+}
+
+.modal-content-close-button {
+    position: absolute;
+    top: 3px;
+    right: -30px;
+
+    padding: 0;
+    width: 20px;
+    height: 20px;
+
+    font-size: 0;
+
+    outline: none;
+    border: none;
+
+    background: none;
+    cursor: pointer;
+}
+
+.modal-content-close-button::after,
+.modal-content-close-button::before {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 3px;
+
+    background-color: #d1d1d1;
+    border-radius: 2px;
+
+    content: "";
+}
+
+.modal-content-close-button::before {
+    transform: rotate(45deg);
+}
+
+.modal-content-close-button::after {
+    transform: rotate(-45deg);
+}
+
+.modal-content-form h2 {
+    margin: 0;
+    margin-bottom: 20px;
+
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.modal-content-form p {
+    margin: 0;
+    margin-bottom: 14px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 236px;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 10px 40px 10px 20px;
+
+    font-size: 14px;
+    line-height: 18px;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    color: #000000;
+    text-transform: uppercase;
+
+    border: 2px solid #000000;
+    outline: none;
+}
+
+.login-form input:focus {
+    border-color: #663d15;
+}
+
+.login-form .btn {
+    width: 100%;
+    margin-top: 10px;
+    margin-right: 0;
+}
+
+.login-form input.icon-user {
+    background: #f9f6f3 url("../assets/sprites.png") no-repeat 220px -338px;
+}
+
+.login-form input.icon-password {
+    background: #f9f6f3 url("../assets/sprites.png") no-repeat 220px -390px;
+}
+
+.login-form label {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.login-form a.restore {
+    float: right;
+    color: #000000;
+}
+
+/*modal-content-form*/
+
+.modal-content-map {
+    position: fixed;
+    z-index: 30;
+    top: calc(50% - 287px);
+    left: calc(50% - 390px);
+    display: none;
+
+    width: 766px;
+    height: 560px;
+    background-color: #e2e2e2;
+
+    border: 7px solid #ffffff;
+}
+
+.modal-content-map .modal-content-close-button {
+    top: -4px;
+    right: -37px;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-2000px);
+    }
+
+    70% {
+        transform: translateY(30px);
+    }
+
+    90% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.show-animation {
+    animation: bounce 0.6s;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+    }
+
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
+}
+
+.modal-error {
+    animation: shake 0.6s;
+}
+
+.content-show {
+    display: block;
+}

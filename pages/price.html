@@ -13,23 +13,21 @@
         <header class="main-header">
             <div class="center clear-fix">
                 <nav class="main-navigation">
+                    <a class="nav-logo" href="../index.html">
+                        <img src="../assets/small-logo.png"
+                             width="111"
+                             height="24"
+                             alt="Главная">
+                    </a>
                     <ul>
-                        <li>
-                            <a class="nav-logo" href="../index.html">
-                                <img src="../assets/small-logo.png"
-                                     width="111"
-                                     height="24"
-                                     alt="Главная">
-                            </a>
-                        </li>
                         <li>
                             <a href="#">Информация</a>
                         </li>
                         <li>
                             <a href="#">Новости</a>
                         </li>
-                        <li>
-                            <a href="#">Прайс-лист</a>
+                        <li class="active">
+                            <span>Прайс-лист</span>
                         </li>
                         <li>
                             <a href="shop.html">Магазин</a>
@@ -51,10 +49,10 @@
                     <a href="../index.html">Главная</a>
                 </li>
                 <li>
-                    <a href="#">Прайс-лист</a>
+                    <span>Прайс-лист</span>
                 </li>
             </ul>
-            <p class="price-tag-line"><strong>Истинно мужская класика</strong></p>
+            <div class="price-tag-line"><h2>Истинно мужская класика</h2></div>
             <div class="price-content clear-fix">
                 <div class="price-content-left">
                     <section class="advantages custom-markers">
@@ -120,5 +118,33 @@
                 </div>
             </div>
         </footer>
+        <div class="modal-overlay"></div>
+        <div class="modal-content-form">
+            <button class="modal-content-close-button"
+                    type="button"
+                    title="Закрыть">
+                Закрыть
+            </button>
+            <h2 class="model-content-title">Личный кабинет</h2>
+            <p>Введите свой логин и пароль</p>
+            <form class="login-form">
+                <input class="icon-user"
+                       type="text"
+                       name="login"
+                       placeholder="Логин">
+                <input class="icon-password"
+                       type="password"
+                       name="password"
+                       placeholder="Пароль">
+                <input class="checkbox"
+                       type="checkbox"
+                       name="remember"
+                       id="checkbox">
+                <label for="checkbox"><span></span>Запомните меня</label>
+                <a class="restore" href="#">Я забыл пароль!</a>
+                <button class="btn" type="submit">Войти</button>
+            </form>
+        </div>
+        <script src="../js/popups.js"></script>
     </body>
 </html>

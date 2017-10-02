@@ -32,7 +32,7 @@
                     </ul>
                 </nav>
                 <div class="user-block">
-                    <a class="login" href="#">Вход</a>
+                    <a href="#" class="login">Вход</a>
                 </div>
             </div>
         </header>
@@ -87,14 +87,18 @@
                                  height="164"
                                  alt="Фото">
                         </figure>
-                        <button class="btn gallery-prev" disabled>Назад</button>
-                        <button class="btn gallery-next">Вперед</button>
+                        <button class="btn gallery-prev" type="button" disabled>
+                            Назад
+                        </button>
+                        <button class="btn gallery-next" type="button">Вперед
+                        </button>
                     </div>
                 </div>
             </div>
             <div class="index-content clear-fix">
                 <div class="index-content-left">
-                    <h2 class="index-content-title" id="contacts">Контактная информация</h2>
+                    <h2 class="index-content-title" id="contacts">Контактная
+                                                                  информация</h2>
                     <p>Барбершоп "Бородинский"<br>
                        Адрес: г. Минск, ул. Победителей, 102/8<br>
                        Телефон: +375(29)1029210
@@ -103,16 +107,14 @@
                        пн-пт: с 10:00 до 22:00<br>
                        сб-вс: с 10:00 до 19:00
                     </p>
-                    <a class="btn" href="#">Как проехать</a>
+                    <a class="btn js-open-map" href="#">Как проехать</a>
                     <a class="btn" href="#">Обратная связь</a>
                 </div>
                 <div class="index-content-right">
                     <h2 class="index-content-title">Записаться</h2>
                     <p>Укажите желаемую дату и мы свяжемся<br>
                        с вами для подтверждения брони</p>
-                    <form class="appointment-form"
-                          action="http://maxaderiha.com"
-                          method="post">
+                    <form class="appointment-form">
                         <input type="text" name="date" placeholder="Дата">
                         <input type="text" name="time" placeholder="Время">
                         <input type="text" name="name" placeholder="Ваше имя">
@@ -138,6 +140,44 @@
                 </div>
             </div>
         </footer>
-        <script src="js/script.js"></script>
+        <div class="modal-overlay"></div>
+        <div class="modal-content-form">
+            <button class="modal-content-close-button"
+                    type="button"
+                    title="Закрыть">
+                Закрыть
+            </button>
+            <h2 class="model-content-title">Личный кабинет</h2>
+            <p>Введите свой логин и пароль</p>
+            <form class="login-form">
+                <input class="icon-user"
+                       type="text"
+                       name="login"
+                       placeholder="Логин">
+                <input class="icon-password"
+                       type="password"
+                       name="password"
+                       placeholder="Пароль">
+                <input class="checkbox"
+                       type="checkbox"
+                       name="remember"
+                       id="checkbox">
+                <label for="checkbox"><span></span>Запомните меня</label>
+                <a class="restore" href="#">Я забыл пароль!</a>
+                <button class="btn" type="submit">Войти</button>
+            </form>
+        </div>
+        <div class="modal-content-map">
+            <button class="modal-content-close-button js-close-map"
+                    type="button"
+                    title="Закрыть"></button>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2348.6266078917793!2d27.476913915379523!3d53.93837723790197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbc5032e10159d%3A0xe4582e6b248259dc!2z0L_RgNC-0YHQvy4g0J_QvtCx0LXQtNC40YLQtdC70LXQuSAxMDIsINCc0LjQvdGB0LosINCR0LXQu9Cw0YDRg9GB0Yw!5e0!3m2!1sru!2sru!4v1506906329179"
+                    width="766"
+                    height="560"
+                    frameborder="0"
+                    style="border:0"
+                    allowfullscreen></iframe>
+        </div>
+        <script src="js/popups.js"></script>
     </body>
 </html>
