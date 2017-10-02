@@ -203,13 +203,15 @@ body {
 }
 
 .checkbox:checked + label::after {
-    content: "\2716";
+    content: "";
     position: absolute;
-    top: 0;
+    top: 5px;
     left: 4px;
 
-    font-size: 16px;
-    color: #000000;
+    width: 14px;
+    height: 14px;
+
+    background: url("../assets/cross.svg") no-repeat;
 }
 
 .radio:checked + label::after {
@@ -319,6 +321,7 @@ body {
     line-height: 20px;
     color: #ffffff;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .login:hover {
@@ -949,7 +952,7 @@ fieldset legend {
     background: #fefbf8 url("../assets/content-texture.png");
 }
 
-.modal-content-close {
+.modal-content-close-button {
     position: absolute;
     top: 3px;
     right: -30px;
@@ -967,8 +970,8 @@ fieldset legend {
     cursor: pointer;
 }
 
-.modal-content-close::after,
-.modal-content-close::before {
+.modal-content-close-button::after,
+.modal-content-close-button::before {
     position: absolute;
     left: 0;
     width: 20px;
@@ -980,11 +983,11 @@ fieldset legend {
     content: "";
 }
 
-.modal-content-close::before {
+.modal-content-close-button::before {
     transform: rotate(45deg);
 }
 
-.modal-content-close::after {
+.modal-content-close-button::after {
     transform: rotate(-45deg);
 }
 
@@ -1055,15 +1058,57 @@ fieldset legend {
     left: calc(50% - 390px);
     display: none;
 
-    width: 780px;
-    height: 574px;
+    width: 766px;
+    height: 560px;
+    background-color: #e2e2e2;
 
-    box-sizing: border-box;
     border: 7px solid #ffffff;
-    background: url("../assets/map.jpg") no-repeat center top;
 }
 
-.modal-content-map .modal-content-close {
+.modal-content-map .modal-content-close-button {
     top: -4px;
     right: -37px;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-2000px);
+    }
+
+    70% {
+        transform: translateY(30px);
+    }
+
+    90% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.show-animation {
+    animation: bounce 0.6s;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+    }
+
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
+}
+
+.modal-error {
+    animation: shake 0.6s;
+}
+
+.content-show {
+    display: block;
 }
