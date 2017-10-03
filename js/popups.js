@@ -8,6 +8,8 @@ let login = popupLogin.querySelector('[name=login]');
 let password = popupLogin.querySelector('[name=password]');
 let form = popupLogin.querySelector('form');
 
+console.log(openPopupLoginBtn);
+
 openPopupLoginBtn.addEventListener('click', (event) => {
     event.preventDefault();
     overlay.classList.add('content-show');
@@ -23,7 +25,6 @@ closePopupLoginBtn.addEventListener('click', (event) => {
 });
 
 form.addEventListener('submit', (event) => {
-
     if (!login.value || !password.value) {
         event.preventDefault();
         popupLogin.classList.add('modal-error');
@@ -51,13 +52,13 @@ let popupMap = document.querySelector('.modal-content-map');
 let openPopupMapBtn = document.querySelector('.js-open-map');
 let closePopupMapBtn = document.querySelector('.js-close-map');
 
-openPopupMapBtn.addEventListener('click', (event) => {
+if (openPopupMapBtn) openPopupMapBtn.addEventListener('click', (event) => {
     event.preventDefault();
     overlay.classList.add('content-show');
     popupMap.classList.add('content-show', 'show-animation');
 });
 
-closePopupMapBtn.addEventListener('click', (event) => {
+if (closePopupMapBtn) closePopupMapBtn.addEventListener('click', (event) => {
     closePopupMap(event);
 });
 
