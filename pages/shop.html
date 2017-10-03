@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="theme-color" content="#000000">
         <title>Барбершоп "Бородинский"</title>
+        <link rel="icon" type="image/png" href="../assets/favicon.ico">
         <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic"
               rel="stylesheet">
         <link rel="stylesheet" href="../css/normalize.css">
@@ -57,7 +58,7 @@
             </ul>
             <div class="shop-content clear-fix">
                 <div class="shop-content-left">
-                    <form class="shop-filter">
+                    <form class="shop-filter" method="post" action="">
                         <fieldset class="producers">
                             <legend>Произвоители:</legend>
                             <input class="shop-checkbox checkbox"
@@ -230,7 +231,7 @@
             </button>
             <h2 class="model-content-title">Личный кабинет</h2>
             <p>Введите свой логин и пароль</p>
-            <form class="login-form">
+            <form class="login-form" method="post" action="">
                 <input class="icon-user"
                        type="text"
                        name="login"
